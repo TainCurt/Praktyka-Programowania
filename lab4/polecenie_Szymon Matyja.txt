@@ -1,0 +1,15 @@
+Realizacja wzroca projektowego singleton
+
+ Wzorzec powinien ograniczać możliwość tworzenia więcej niż jednej instancji tego samego obiektu.
+Przykładowo: po stworzeniu elementu klasy „Regulamin” program nie powinien pozwolić na stworzenie drugiego elementu tej samej klasy.
+Docelowo jest to metoda stworzenia zmiennej o zasięgu globalnym, ale bez możliwości nadpisania jej poza dedykowanymi metodami/funkcjami.
+
+ Rozwiązania:
+Potencjalnie można ograniczyć możliwość dostępu do kreatora poprzez ustawienie go jako element domyślnie prywatny, by zabezpieczyć się przed wykorzystaniem new w programie
+Wprowadzenie statycznego konstruktora, który wywoła stworzenie obiektu, a powrót do niego będzie możliwy jedynie poprzez ponowne wywołanie.
+ 
+Analogia:
+Regulamin jest tworzony wobec konkretnych wytycznych i zawsze będzie składał się z kolejnych działów. W jednej chwili aktywny może być tylko jeden regulamin, dlatego uchwalenie może się odbyć jedynie w miejsce poprzedniego, a nie równolegle przy późniejszym dokonaniu zmiany.
+ 
+ 
+
